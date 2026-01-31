@@ -1,0 +1,11 @@
+[window]
+padding = { x = 10, y = 10 }
+opacity = 0.9
+decorations = "None"
+[font]
+size = 14.0
+
+[general]
+import = [
+	"~/.config/alacritty/dank-theme.toml"
+]
