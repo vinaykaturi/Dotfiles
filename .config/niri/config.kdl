@@ -12,6 +12,7 @@ input {
         repeat-delay 200
         repeat-rate 35
         xkb {
+            // swaps caplock with Escape key
             options "caps:swapescape"
 
         }
