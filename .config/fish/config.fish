@@ -7,5 +7,8 @@ alias ls="eza -lh"
 alias la="eza -alh"
 alias cls="clear"
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'  
+alias nv="nvim"
+
+fish_vi_key_bindings
 
 end
