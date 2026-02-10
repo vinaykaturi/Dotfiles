@@ -29,9 +29,10 @@ get_wm() {
 }
 get_resolution() { 
     if command -v wlr-randr >/dev/null; then
-        Res=$(wlr-randr | grep "current" | xargs | awk '{print $1}')
-        Rate=$(wlr-randr | grep "current" | xargs | awk '{print $3}' | cut -d"." -f1)
-        echo "${Res}px @ ${Rate}Hz"
+        #Res=$(wlr-randr | grep "current" | xargs | awk '{print $1}')
+        #Rate=$(wlr-randr | grep "current" | xargs | awk '{print $3}' | cut -d"." -f1)
+        #echo "${Res}px @ ${Rate}Hz"
+        wlr-randr | grep "current" | xargs | awk '{print $1"px @ " int($3)"Hz"}'
     else
         Res=$(cat /sys/class/drm/*/modes | head -n 1)
         echo "${Res}px"
